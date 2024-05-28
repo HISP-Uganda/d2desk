@@ -1,6 +1,10 @@
+# Directories and files that cannot be commited to git
+
+# Byte-compiled
 __pycache__
 *.py[cod]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
