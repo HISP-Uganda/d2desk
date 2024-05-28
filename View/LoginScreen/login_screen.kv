@@ -1,0 +1,122 @@
+<LoginScreenView>
+    name: "login_screen"
+    MDFloatLayout:
+        FitImage:
+            source: "assets/images/abstract-luxury-gradient.png"
+        MDCard:
+            orientation: "vertical"
+            padding: 0, 0, 0 , "36dp"
+            size_hint: .85, .9
+            style: "elevated"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            md_bg_color: "white"
+            md_bg_color_disabled: "grey"
+            shadow_color: "blue"
+            shadow_offset: (1, -2)
+            shadow_softness: 1
+            # elevation: 4
+            # radius: [10]
+
+            MDRecycleView:
+                pos_hint: {"center_x": .5, "center_y": .5}
+                MDBoxLayout:
+                    # size_hint: .85, .08
+                    orientation: "vertical"
+                    spacing: "30dp"
+                    padding: "20dp"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    Image:
+                        source: "assets/images/dhis2.png"
+                        # size_hint_x: None
+                        # size_hint_y: .3
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+                    MDLabel:
+                        text: "Login"
+                        adaptive_size: True
+                        role: "large"
+                        # font_size: "32sp"
+                        size_hint_x: None
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+                    MDTextField:
+                        mode: "outlined"
+                        width: "400dp"
+                        padding: "10dp"
+                        required: True
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        size_hint_x: None
+                        MDTextFieldLeadingIcon:
+                            icon: "link"
+
+                        MDTextFieldHintText:
+                            text: "DHIS2 URL"
+
+
+                    MDTextField:
+                        mode: "outlined"
+                        width: "400dp"
+                        padding: "10dp"
+                        required: True
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        size_hint_x: None
+                        MDTextFieldLeadingIcon:
+                            icon: "account"
+
+                        MDTextFieldHintText:
+                            text: "Username"
+
+
+                    MDTextField:
+                        mode: "outlined"
+                        width: "400dp"
+                        padding: "10dp"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        size_hint_x: None
+                        required: True
+                        password: True
+                        password_mask: '•'
+                        MDTextFieldLeadingIcon:
+                            icon: "key"
+
+                        MDTextFieldHintText:
+                            text: "Password"
+                        MDTextFieldHelperText:
+                            text: ""
+                            mode: "on_focus"
+
+
+                    MDButton:
+                        style: "elevated"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        size_hint_x: 0.5
+                        radius: "10dp"
+                        width: self.parent.width * 0 + dp(200.0)
+                        MDButtonIcon:
+                            icon: "login"
+                        MDButtonText:
+                            text: "Login"
+
+#                    hint_text: "Phone Number"
+#                    pos_hint: {"center_x": .5, "center_y": .5}
+#                    multiline: False
+#                    phone_number: True
+#                    padding: 15
+#                    height: self.minimum_height
+#                    font_size: "20sp"
+#                    text_color_normal: "black"
+#                    required: True
+#                    input_filter: "int"
+#                    max_text_length: 12
+#                    on_text: root.controller.set_user_data("phone_number", self.text)
+#            MDButton:
+#                size_hint: .85, .08
+#                pos_hint: {"center_x": .5, "center_y": .29}
+#                md_bg_color: "#761911"
+#                line_color: "#761911"
+#                on_press: root.controller.login()
+#                MDButtonText:
+#                    id: text
+#                    text: "Login"
+#                    text_color: "white"
+#                    font_size: "18sp"
